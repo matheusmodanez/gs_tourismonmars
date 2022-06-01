@@ -58,9 +58,26 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
-  #   - images/a_dot_ham.jpeg
+  assets:
+    - assets/images/MarsCompany.png
+    - assets/images/bgintro.png
+    - assets/images/bglist.png
+    - assets/images/bgnewtrip.png
+    - assets/images/bgviewtrip.png
+    - assets/images/trip1.png
+    - assets/images/trip2.png
+    - assets/images/trip3.png
+    - assets/images/trip4.png
+
+  fonts:
+    - family: Space Mono
+      fonts:
+        - asset: assets/fonts/SpaceMono-Regular.ttf
+        - asset: assets/fonts/SpaceMono-Italic.ttf
+          style: italic
+        - asset: assets/fonts/SpaceMono-Bold.ttf
+
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
