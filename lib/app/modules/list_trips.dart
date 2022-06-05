@@ -2,12 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:gs_tourismonmars/app/components/standard_card.dart';
 import 'package:gs_tourismonmars/app/components/standard_page.dart';
 import 'package:gs_tourismonmars/app/models/trip_model.dart';
+import 'package:gs_tourismonmars/app/modules/view_trip.dart';
 
 class ListViewPage extends StatelessWidget {
   ListViewPage({required this.tripList});
 
   List<TripModel> tripList = [];
-  
+
   @override
   Widget build(BuildContext context) {
     return StandardPage(
@@ -48,9 +49,25 @@ class ListViewPage extends StatelessWidget {
                       cursor: SystemMouseCursors.click,
                       child: GestureDetector(
                         onTap: () {
-                          print(tripItem.cover);
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: ((context) => ViewTripPage(
+                                    cover: tripItem.cover,
+                                    date: tripItem.date,
+                                    duration: tripItem.duration.toString(),
+                                    seats: tripItem.seats.toString(),
+                                    spaceshipModel: tripItem.spaceshipModel,
+                                    firstCmderName: tripItem.firstCmderName,
+                                    firstCmderBadge: tripItem.firstCmderBadge,
+                                    secondCmderName: tripItem.secondCmderName,
+                                    secondCmderBadge: tripItem.secondCmderBadge,
+                                  )),
+                            ),
+                          );
                         },
                         child: StandardCard(
+                          cover: tripItem.cover,
                           spaceshipModel: tripItem.spaceshipModel,
                           date: tripItem.date,
                           firstCmderName: tripItem.firstCmderName,

@@ -31,7 +31,38 @@ class _AddTripPageState extends State<AddTripPage> {
   FocusNode scommanderNameFocus = FocusNode();
   FocusNode scommanderBadgeFocus = FocusNode();
 
-  List<TripModel> tripList = [TripModel(cover: 'assets/images/trip3.png', date: '01/01/2150', duration: 15, seats: 5, firstCmderName: 'Rômulo Domiciano', firstCmderBadge: '0001-XY',secondCmderName: 'Daniel Amaral', secondCmderBadge: '0002-XX', spaceshipModel: 'XPTO-13')];
+  List<TripModel> tripList = [
+    TripModel(
+        cover: 'assets/images/trip3.png',
+        date: '01/01/2150',
+        duration: 15,
+        seats: 5,
+        firstCmderName: 'Rômulo Domiciano',
+        firstCmderBadge: '0001-XY',
+        secondCmderName: 'Daniel Amaral',
+        secondCmderBadge: '0002-XX',
+        spaceshipModel: 'XPTO-13'),
+    TripModel(
+        cover: 'assets/images/trip2.png',
+        date: '13/04/2077',
+        duration: 32,
+        seats: 12,
+        firstCmderName: 'Matheus Modanez',
+        firstCmderBadge: '0123-XY',
+        secondCmderName: 'Isabela Caovila',
+        secondCmderBadge: '0456-XX',
+        spaceshipModel: 'QWERTY09'),
+    TripModel(
+        cover: 'assets/images/trip4.png',
+        date: '23/09/2050',
+        duration: 7,
+        seats: 4,
+        firstCmderName: 'Rômulo Domiciano',
+        firstCmderBadge: '0001-XY',
+        secondCmderName: 'Isabela Caovila',
+        secondCmderBadge: '0456-XX',
+        spaceshipModel: 'M4RS-11'),
+  ];
 
   List<String> coverPaths = [
     'assets/images/trip1.png',

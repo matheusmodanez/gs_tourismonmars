@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:gs_tourismonmars/app/models/trip_model.dart';
+import 'package:gs_tourismonmars/app/modules/view_trip.dart';
 
 class StandardCard extends StatelessWidget {
   final String? cover;
@@ -34,13 +36,26 @@ class StandardCard extends StatelessWidget {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Container(
-                width: 100,
-                height: 100,
-                decoration: BoxDecoration(
-                    image: DecorationImage(
-                        image: AssetImage('$cover'), fit: BoxFit.cover),
-                    shape: BoxShape.circle),
+              MouseRegion(
+                cursor: SystemMouseCursors.click,
+                child: GestureDetector(
+                  onTap: () {
+                    // Navigator.push(
+                    //   context,
+                    //   MaterialPageRoute(
+                    //     builder: ((context) => ViewTripPage(trip: trip,)),
+                    //   ),
+                    // );
+                  },
+                  child: Container(
+                    width: 100,
+                    height: 100,
+                    decoration: BoxDecoration(
+                        image: DecorationImage(
+                            image: AssetImage('$cover'), fit: BoxFit.cover),
+                        shape: BoxShape.circle),
+                  ),
+                ),
               ),
               SizedBox(
                 height: 15,
