@@ -1,20 +1,27 @@
 import 'package:flutter/material.dart';
-import 'package:gs_tourismonmars/app/components/standard_glass_button.dart';
+import 'package:gs_tourismonmars/app/components/glass_button.dart';
 import 'package:gs_tourismonmars/app/modules/login.dart';
 
 class IntroPage extends StatelessWidget {
-//   Future<void> _showDialog({
-//     String? about,
-//     required BuildContext context,
-//   }) async {
-//     return showDialog<void>(
-//         context: context,
-//         builder: (BuildContext context) {
-//           return AlertDialog(
-//             content: Text(about!),
-//           );
-//         });
-//   }
+  Future<void> _showDialog({
+    String about =
+        'TURMA 3SIT  \nEQUIPE:\nIsabela Caovila  RM 84141\nMatheus Modanez RM 86065',
+    required BuildContext context,
+  }) async {
+    return showDialog<void>(
+        context: context,
+        builder: (BuildContext context) {
+          return AlertDialog(
+            content: Text(about, textAlign: TextAlign.justify,),
+            backgroundColor: Color.fromARGB(255, 1, 72, 87),
+            contentTextStyle: TextStyle(
+                color: Colors.white,
+                fontFamily: 'Space Mono',
+                fontSize: 16,
+                fontWeight: FontWeight.bold),
+          );
+        });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -73,7 +80,9 @@ class IntroPage extends StatelessWidget {
                 height: 125,
               ),
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  _showDialog(context: context);
+                },
                 child: Text(
                   'sobre a equipe',
                   textAlign: TextAlign.justify,

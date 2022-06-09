@@ -1,15 +1,18 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:gs_tourismonmars/app/components/standard_page.dart';
-import 'package:gs_tourismonmars/app/components/standard_textfield.dart';
+import 'package:gs_tourismonmars/app/components/page.dart';
+import 'package:gs_tourismonmars/app/components/textfield.dart';
 import 'package:gs_tourismonmars/app/models/trip_model.dart';
 import 'package:gs_tourismonmars/app/modules/list_trips.dart';
 
 class AddTripPage extends StatefulWidget {
+  List<TripModel> tripList = [];
+  AddTripPage({required this.tripList});
+
   @override
   State<StatefulWidget> createState() {
-    return _AddTripPageState();
+    return _AddTripPageState(tripList: tripList);
   }
 }
 
@@ -31,38 +34,9 @@ class _AddTripPageState extends State<AddTripPage> {
   FocusNode scommanderNameFocus = FocusNode();
   FocusNode scommanderBadgeFocus = FocusNode();
 
-  List<TripModel> tripList = [
-    TripModel(
-        cover: 'assets/images/trip3.png',
-        date: '01/01/2150',
-        duration: 15,
-        seats: 5,
-        firstCmderName: 'Rômulo Domiciano',
-        firstCmderBadge: '0001-XY',
-        secondCmderName: 'Daniel Amaral',
-        secondCmderBadge: '0002-XX',
-        spaceshipModel: 'XPTO-13'),
-    TripModel(
-        cover: 'assets/images/trip2.png',
-        date: '13/04/2077',
-        duration: 32,
-        seats: 12,
-        firstCmderName: 'Matheus Modanez',
-        firstCmderBadge: '0123-XY',
-        secondCmderName: 'Isabela Caovila',
-        secondCmderBadge: '0456-XX',
-        spaceshipModel: 'QWERTY09'),
-    TripModel(
-        cover: 'assets/images/trip4.png',
-        date: '23/09/2050',
-        duration: 7,
-        seats: 4,
-        firstCmderName: 'Rômulo Domiciano',
-        firstCmderBadge: '0001-XY',
-        secondCmderName: 'Isabela Caovila',
-        secondCmderBadge: '0456-XX',
-        spaceshipModel: 'M4RS-11'),
-  ];
+  List<TripModel> tripList = [];
+
+  _AddTripPageState({required this.tripList});
 
   List<String> coverPaths = [
     'assets/images/trip1.png',
@@ -380,6 +354,9 @@ class _AddTripPageState extends State<AddTripPage> {
                   elevation: 0,
                   primary: Color.fromARGB(255, 1, 50, 65),
                 ),
+              ),
+              SizedBox(
+                height: 20,
               ),
             ],
           ),

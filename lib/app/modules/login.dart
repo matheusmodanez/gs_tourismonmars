@@ -1,10 +1,45 @@
 import 'package:flutter/material.dart';
-import 'package:gs_tourismonmars/app/components/standard_glass_button.dart';
-import 'package:gs_tourismonmars/app/components/standard_textfield.dart';
+import 'package:gs_tourismonmars/app/components/glass_button.dart';
+import 'package:gs_tourismonmars/app/components/textfield.dart';
+import 'package:gs_tourismonmars/app/models/trip_model.dart';
 import 'package:gs_tourismonmars/app/modules/add_trip.dart';
 import 'package:gs_tourismonmars/app/modules/list_trips.dart';
 
 class Login extends StatelessWidget {
+
+  List<TripModel> tripList = [
+    TripModel(
+        cover: 'assets/images/trip3.png',
+        date: '01/01/2150',
+        duration: 15,
+        seats: 5,
+        firstCmderName: 'Rômulo Domiciano',
+        firstCmderBadge: '0001-XY',
+        secondCmderName: 'Daniel Amaral',
+        secondCmderBadge: '0002-XX',
+        spaceshipModel: 'XPTO-13'),
+    TripModel(
+        cover: 'assets/images/trip2.png',
+        date: '13/04/2077',
+        duration: 32,
+        seats: 12,
+        firstCmderName: 'Matheus Modanez',
+        firstCmderBadge: '0123-XY',
+        secondCmderName: 'Isabela Caovila',
+        secondCmderBadge: '0456-XX',
+        spaceshipModel: 'QWERTY09'),
+    TripModel(
+        cover: 'assets/images/trip4.png',
+        date: '23/09/2050',
+        duration: 7,
+        seats: 4,
+        firstCmderName: 'Rômulo Domiciano',
+        firstCmderBadge: '0001-XY',
+        secondCmderName: 'Isabela Caovila',
+        secondCmderBadge: '0456-XX',
+        spaceshipModel: 'M4RS-11'),
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -70,7 +105,7 @@ class Login extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: ((context) => AddTripPage()),
+                      builder: ((context) => ListViewPage(tripList: tripList,)),
                     ),
                   );
                 },

@@ -31,7 +31,7 @@ class StandardCard extends StatelessWidget {
       height: 200,
       width: 350,
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -39,14 +39,6 @@ class StandardCard extends StatelessWidget {
               MouseRegion(
                 cursor: SystemMouseCursors.click,
                 child: GestureDetector(
-                  onTap: () {
-                    // Navigator.push(
-                    //   context,
-                    //   MaterialPageRoute(
-                    //     builder: ((context) => ViewTripPage(trip: trip,)),
-                    //   ),
-                    // );
-                  },
                   child: Container(
                     width: 100,
                     height: 100,
@@ -54,7 +46,7 @@ class StandardCard extends StatelessWidget {
                         image: DecorationImage(
                             image: AssetImage('$cover'), fit: BoxFit.cover),
                         shape: BoxShape.circle),
-                  ),
+                                          ),
                 ),
               ),
               SizedBox(

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gs_tourismonmars/app/components/standard_page.dart';
+import 'package:gs_tourismonmars/app/components/page.dart';
 import 'package:gs_tourismonmars/app/models/trip_model.dart';
 
 class ViewTripPage extends StatelessWidget {
@@ -35,7 +35,7 @@ class ViewTripPage extends StatelessWidget {
             borderRadius: BorderRadius.circular(25),
           ),
           padding: EdgeInsets.only(
-            bottom: 35,
+            bottom: 45,
           ),
           child: Column(
             children: [
@@ -63,16 +63,6 @@ class ViewTripPage extends StatelessWidget {
                       padding:
                           EdgeInsets.symmetric(horizontal: 25, vertical: 10),
                     ),
-                    Container(
-                      alignment: Alignment.bottomRight,
-                      child: ElevatedButton(
-                        onPressed: () {},
-                        child: Icon(Icons.edit_note_outlined),
-                      ),
-                      padding: EdgeInsets.symmetric(
-                        horizontal: 25,
-                      ),
-                    )
                   ],
                 ),
               ),
@@ -101,7 +91,7 @@ class ViewTripPage extends StatelessWidget {
                           fontWeight: FontWeight.bold),
                     ),
                     SizedBox(
-                      height: 25,
+                      height: 30,
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -151,7 +141,7 @@ class ViewTripPage extends StatelessWidget {
                       ],
                     ),
                     SizedBox(
-                      height: 25,
+                      height: 35,
                     ),
                     Column(
                       children: [
@@ -182,7 +172,7 @@ class ViewTripPage extends StatelessWidget {
                       ],
                     ),
                     SizedBox(
-                      height: 15,
+                      height: 30,
                     ),
                     Column(
                       children: [
