@@ -4,6 +4,7 @@ import 'package:gs_tourismonmars/app/components/textfield.dart';
 import 'package:gs_tourismonmars/app/models/trip_model.dart';
 import 'package:gs_tourismonmars/app/modules/add_trip.dart';
 import 'package:gs_tourismonmars/app/modules/list_trips.dart';
+import 'package:gs_tourismonmars/utils/export.dart';
 
 class Login extends StatelessWidget {
 
@@ -69,11 +70,10 @@ class Login extends StatelessWidget {
               Container(
                 alignment: Alignment.centerLeft,
                 child: Text(
-                  'E-mail',
+                  email,
                   style: TextStyle(
-                      color: Colors.white,
                       fontWeight: FontWeight.bold,
-                      fontFamily: 'Space Mono'),
+                      ),
                 ),
               ),
               StandardTextField(label: 'digite seu e-mail'),
@@ -83,11 +83,9 @@ class Login extends StatelessWidget {
               Container(
                 alignment: Alignment.centerLeft,
                 child: Text(
-                  'Senha',
+                  password,
                   style: TextStyle(
-                    color: Colors.white,
                     fontWeight: FontWeight.bold,
-                    fontFamily: 'Space Mono',
                   ),
                 ),
               ),
@@ -100,7 +98,7 @@ class Login extends StatelessWidget {
                 end: 0.1,
                 width: 300,
                 height: 50,
-                buttonText: 'ENTRAR',
+                buttonText: login,
                 onPressed: () {
                   Navigator.push(
                     context,

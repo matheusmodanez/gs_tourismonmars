@@ -1,22 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:gs_tourismonmars/app/components/glass_button.dart';
 import 'package:gs_tourismonmars/app/modules/login.dart';
+import 'package:gs_tourismonmars/utils/export.dart';
 
 class IntroPage extends StatelessWidget {
   Future<void> _showDialog({
-    String about =
-        'TURMA 3SIT  \nEQUIPE:\nIsabela Caovila  RM 84141\nMatheus Modanez RM 86065',
     required BuildContext context,
   }) async {
     return showDialog<void>(
         context: context,
         builder: (BuildContext context) {
           return AlertDialog(
-            content: Text(about, textAlign: TextAlign.justify,),
+            content: Text(team, textAlign: TextAlign.justify,),
             backgroundColor: Color.fromARGB(255, 1, 72, 87),
             contentTextStyle: TextStyle(
-                color: Colors.white,
-                fontFamily: 'Space Mono',
                 fontSize: 16,
                 fontWeight: FontWeight.bold),
           );
@@ -50,12 +47,10 @@ class IntroPage extends StatelessWidget {
                 height: 50,
               ),
               Text(
-                'Bem-Vindx à plataforma de gestão de viagens da Tourism On Mars. \nAdicione, atualize e visualize todos os dados de viagens, espaçonave, e de sua tripulação. \nO sistema da Tourism on Mars está anos-luz à frente do mercado, quando se trata de viagem espacial.',
+               intro,
                 textAlign: TextAlign.justify,
                 style: TextStyle(
-                  color: Colors.white,
                   fontSize: 15,
-                  fontFamily: 'Space Mono',
                 ),
               ),
               SizedBox(
@@ -66,7 +61,7 @@ class IntroPage extends StatelessWidget {
                 end: 0.1,
                 width: 300,
                 height: 50,
-                buttonText: 'COMEÇAR',
+                buttonText: begin,
                 onPressed: () {
                   Navigator.push(
                     context,
@@ -84,17 +79,8 @@ class IntroPage extends StatelessWidget {
                   _showDialog(context: context);
                 },
                 child: Text(
-                  'sobre a equipe',
+                  about,
                   textAlign: TextAlign.justify,
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontFamily: 'Space Mono',
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                style: ElevatedButton.styleFrom(
-                  elevation: 0,
-                  primary: Color.fromARGB(255, 1, 50, 65),
                 ),
               ),
             ],

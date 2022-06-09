@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gs_tourismonmars/app/components/page.dart';
 import 'package:gs_tourismonmars/app/models/trip_model.dart';
+import 'package:gs_tourismonmars/utils/export.dart';
 
 class ViewTripPage extends StatelessWidget {
   final String? cover;
@@ -54,9 +55,6 @@ class ViewTripPage extends StatelessWidget {
                       child: Text(
                         '$spaceshipModel',
                         style: TextStyle(
-                            // backgroundColor: Color.fromARGB(185, 1, 50, 65),
-                            color: Colors.white,
-                            fontFamily: 'Space Mono',
                             fontSize: 30,
                             fontWeight: FontWeight.bold),
                       ),
@@ -75,18 +73,14 @@ class ViewTripPage extends StatelessWidget {
                 child: Column(
                   children: [
                     Text(
-                      'Data da Decolagem',
+                      tripDate,
                       style: TextStyle(
-                          color: Colors.white,
-                          fontFamily: 'Space Mono',
                           fontSize: 18,
                           fontWeight: FontWeight.bold),
                     ),
                     Text(
                       '$date',
                       style: TextStyle(
-                          color: Colors.white,
-                          fontFamily: 'Space Mono',
                           fontSize: 18,
                           fontWeight: FontWeight.bold),
                     ),
@@ -99,10 +93,8 @@ class ViewTripPage extends StatelessWidget {
                         Column(
                           children: [
                             Text(
-                              'Duração \nda Viagem',
+                             durationWrap,
                               style: TextStyle(
-                                  color: Colors.white,
-                                  fontFamily: 'Space Mono',
                                   fontSize: 16,
                                   fontWeight: FontWeight.bold),
                               textAlign: TextAlign.center,
@@ -110,8 +102,6 @@ class ViewTripPage extends StatelessWidget {
                             Text(
                               '$duration',
                               style: TextStyle(
-                                  color: Colors.white,
-                                  fontFamily: 'Space Mono',
                                   fontSize: 16,
                                   fontWeight: FontWeight.bold),
                             ),
@@ -120,10 +110,8 @@ class ViewTripPage extends StatelessWidget {
                         Column(
                           children: [
                             Text(
-                              'Assentos \nDisponíveis',
+                              seatsWrap,
                               style: TextStyle(
-                                  color: Colors.white,
-                                  fontFamily: 'Space Mono',
                                   fontSize: 16,
                                   fontWeight: FontWeight.bold),
                               textAlign: TextAlign.center,
@@ -131,8 +119,6 @@ class ViewTripPage extends StatelessWidget {
                             Text(
                               '$seats',
                               style: TextStyle(
-                                  color: Colors.white,
-                                  fontFamily: 'Space Mono',
                                   fontSize: 16,
                                   fontWeight: FontWeight.bold),
                             ),
@@ -146,26 +132,20 @@ class ViewTripPage extends StatelessWidget {
                     Column(
                       children: [
                         Text(
-                          'Dados do Primeiro Comandante',
+                          dataFirst,
                           style: TextStyle(
-                            color: Colors.white,
-                            fontFamily: 'Space Mono',
                             fontSize: 16,
                           ),
                         ),
                         Text(
-                          'Nome: $firstCmderName',
+                          '$name: $firstCmderName',
                           style: TextStyle(
-                              color: Colors.white,
-                              fontFamily: 'Space Mono',
                               fontSize: 16,
                               fontWeight: FontWeight.bold),
                         ),
                         Text(
-                          'Matrícula: $firstCmderBadge',
+                          '$badgeVar: $firstCmderBadge',
                           style: TextStyle(
-                              color: Colors.white,
-                              fontFamily: 'Space Mono',
                               fontSize: 16,
                               fontWeight: FontWeight.bold),
                         ),
@@ -177,26 +157,20 @@ class ViewTripPage extends StatelessWidget {
                     Column(
                       children: [
                         Text(
-                          'Dados do Segundo Comandante',
+                          dataSecond,
                           style: TextStyle(
-                            color: Colors.white,
-                            fontFamily: 'Space Mono',
                             fontSize: 16,
                           ),
                         ),
                         Text(
-                          'Nome: $secondCmderName',
+                          '$name: $secondCmderName',
                           style: TextStyle(
-                              color: Colors.white,
-                              fontFamily: 'Space Mono',
                               fontSize: 16,
                               fontWeight: FontWeight.bold),
                         ),
                         Text(
-                          'Matrícula: $secondCmderBadge',
+                          '$badgeVar: $secondCmderBadge',
                           style: TextStyle(
-                              color: Colors.white,
-                              fontFamily: 'Space Mono',
                               fontSize: 16,
                               fontWeight: FontWeight.bold),
                         ),

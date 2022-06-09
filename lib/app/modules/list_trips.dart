@@ -4,6 +4,7 @@ import 'package:gs_tourismonmars/app/components/page.dart';
 import 'package:gs_tourismonmars/app/models/trip_model.dart';
 import 'package:gs_tourismonmars/app/modules/add_trip.dart';
 import 'package:gs_tourismonmars/app/modules/view_trip.dart';
+import 'package:gs_tourismonmars/utils/export.dart';
 
 class ListViewPage extends StatelessWidget {
   ListViewPage({required this.tripList});
@@ -27,11 +28,9 @@ class ListViewPage extends StatelessWidget {
           child: Column(
             children: [
               Text(
-                'lista de viagens',
+                titleList,
                 style: TextStyle(
-                  color: Colors.white,
                   fontSize: 25,
-                  fontFamily: 'Space Mono',
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -45,17 +44,11 @@ class ListViewPage extends StatelessWidget {
                   );
                 },
                 child: Text(
-                  'nova viagem',
+                  newTrip,
                   textAlign: TextAlign.justify,
                   style: TextStyle(
-                    color: Colors.white,
-                    fontFamily: 'Space Mono',
                     fontWeight: FontWeight.bold,
                   ),
-                ),
-                style: ElevatedButton.styleFrom(
-                  elevation: 0,
-                  primary: Color.fromARGB(255, 1, 50, 65),
                 ),
               ),
               ListView.separated(

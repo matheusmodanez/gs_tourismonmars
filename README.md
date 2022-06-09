@@ -1,16 +1,20 @@
-# gs_tourismonmars
 
-A new Flutter project.
+# Global Solution - Space Tourism 🚀
 
-## Getting Started
+**Desenvolvimento Cross Platform | Android FIAP**
 
-This project is a starting point for a Flutter application.
+* *Turma:* 3SIT 
+* *Graduação:* Sistemas de Informação
+* *Ano:* 2022
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## O Projeto
+> Criação de uma aplicação em flutter, para a Global Solution do 1º semestre de 2022
+> A aplicação: Gerenciamento de viagens da empresa Tourism On Mars, na aplicação é possível cadastrar viagens, ver uma lista completa de todas as viagens cadastradas e também ter informações específicas sobre alguma viagem. 
+
+
+| Autor               | RM                                                |
+| ----------------- | ---------------------------------------------------------------- |
+| Isabela Caovila Baldim        | 84141 |
+| Matheus Nathan Modanez        | 86065 |

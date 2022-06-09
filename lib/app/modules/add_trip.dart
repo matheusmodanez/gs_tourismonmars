@@ -5,6 +5,7 @@ import 'package:gs_tourismonmars/app/components/page.dart';
 import 'package:gs_tourismonmars/app/components/textfield.dart';
 import 'package:gs_tourismonmars/app/models/trip_model.dart';
 import 'package:gs_tourismonmars/app/modules/list_trips.dart';
+import 'package:gs_tourismonmars/utils/export.dart';
 
 class AddTripPage extends StatefulWidget {
   List<TripModel> tripList = [];
@@ -98,11 +99,9 @@ class _AddTripPageState extends State<AddTripPage> {
           child: Column(
             children: [
               Text(
-                'nova viagem',
+                newTrip,
                 style: TextStyle(
-                  color: Colors.white,
                   fontSize: 30,
-                  fontFamily: 'Space Mono',
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -110,11 +109,9 @@ class _AddTripPageState extends State<AddTripPage> {
                 height: 20,
               ),
               Text(
-                'Data da Decolagem',
+               tripDate,
                 style: TextStyle(
-                  color: Colors.white,
                   fontSize: 15,
-                  fontFamily: 'Space Mono',
                 ),
               ),
               StandardTextField(
@@ -132,11 +129,9 @@ class _AddTripPageState extends State<AddTripPage> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    'Duração da viagem',
+                    duration,
                     style: TextStyle(
-                      color: Colors.white,
                       fontSize: 15,
-                      fontFamily: 'Space Mono',
                     ),
                   ),
                   StandardTextField(
@@ -157,11 +152,9 @@ class _AddTripPageState extends State<AddTripPage> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    'Quantidade de Assentos',
+                    seats,
                     style: TextStyle(
-                      color: Colors.white,
                       fontSize: 15,
-                      fontFamily: 'Space Mono',
                     ),
                   ),
                   StandardTextField(
@@ -182,11 +175,9 @@ class _AddTripPageState extends State<AddTripPage> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    'Modelo da Nave',
+                    shipModel,
                     style: TextStyle(
-                      color: Colors.white,
                       fontSize: 15,
-                      fontFamily: 'Space Mono',
                     ),
                   ),
                   StandardTextField(
@@ -204,11 +195,9 @@ class _AddTripPageState extends State<AddTripPage> {
                 height: 25,
               ),
               Text(
-                'DADOS DO PRIMEIRO COMANDANTE',
+               dataFirst,
                 style: TextStyle(
-                  color: Colors.white,
                   fontSize: 16,
-                  fontFamily: 'Space Mono',
                 ),
               ),
               SizedBox(
@@ -218,11 +207,9 @@ class _AddTripPageState extends State<AddTripPage> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    'Nome',
+                   name,
                     style: TextStyle(
-                      color: Colors.white,
                       fontSize: 15,
-                      fontFamily: 'Space Mono',
                     ),
                   ),
                   StandardTextField(
@@ -243,11 +230,9 @@ class _AddTripPageState extends State<AddTripPage> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    'Matrícula \nInterespacial',
+                    badge,
                     style: TextStyle(
-                      color: Colors.white,
                       fontSize: 15,
-                      fontFamily: 'Space Mono',
                     ),
                   ),
                   StandardTextField(
@@ -265,11 +250,9 @@ class _AddTripPageState extends State<AddTripPage> {
                 height: 15,
               ),
               Text(
-                'DADOS DO SEGUNDO COMANDANTE',
+                dataSecond,
                 style: TextStyle(
-                  color: Colors.white,
                   fontSize: 16,
-                  fontFamily: 'Space Mono',
                 ),
               ),
               SizedBox(
@@ -279,11 +262,9 @@ class _AddTripPageState extends State<AddTripPage> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    'Nome',
+                    name,
                     style: TextStyle(
-                      color: Colors.white,
                       fontSize: 15,
-                      fontFamily: 'Space Mono',
                     ),
                   ),
                   StandardTextField(
@@ -304,11 +285,9 @@ class _AddTripPageState extends State<AddTripPage> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    'Matrícula \nInterespacial',
+                    badge,
                     style: TextStyle(
-                      color: Colors.white,
                       fontSize: 15,
-                      fontFamily: 'Space Mono',
                     ),
                   ),
                   StandardTextField(
@@ -342,17 +321,11 @@ class _AddTripPageState extends State<AddTripPage> {
                   );
                 },
                 child: Text(
-                  'salvar viagem',
+                  save,
                   textAlign: TextAlign.justify,
                   style: TextStyle(
-                    color: Colors.white,
-                    fontFamily: 'Space Mono',
                     fontWeight: FontWeight.bold,
                   ),
-                ),
-                style: ElevatedButton.styleFrom(
-                  elevation: 0,
-                  primary: Color.fromARGB(255, 1, 50, 65),
                 ),
               ),
               SizedBox(
